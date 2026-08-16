@@ -32,7 +32,7 @@ export async function getOrderById(id) {
 
 export async function getOrdersByProductAndUser(product_id, user_id) {
     const SQL = `
-        SELECT orders*
+        SELECT orders.*
         FROM orders
         JOIN orders_products ON orders.id = orders_products.order_id
         WHERE orders_products.product_id = $1
